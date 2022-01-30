@@ -1,3 +1,3 @@
-module github.com/nico4kd/go_tools/exe
+module github.com/nico4kd/jgt/exe
 
 go 1.17

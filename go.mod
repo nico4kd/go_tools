@@ -1,3 +1,3 @@
-module github.com/nico4kd/go_tools
+module github.com/nico4kd/jgt
 
 go 1.17

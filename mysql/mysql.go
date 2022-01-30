@@ -3,8 +3,8 @@ package mysql
 import (
 	"os/exec"
 
-	"github.com/nico4kd/go_tools/exe"
-	"github.com/nico4kd/go_tools/jio"
+	"github.com/nico4kd/jgt/exe"
+	"github.com/nico4kd/jgt/jio"
 )
 
 type Jmysql struct {
@@ -14,7 +14,7 @@ type Jmysql struct {
 	Squema string
 }
 
-func SetVar(Dns string,Root string,Pass string, Squema string) Jmysql {
+func SetVar(Dns string, Root string, Pass string, Squema string) Jmysql {
 	return Jmysql{
 		Dns:    Dns,
 		Root:   Root,
@@ -31,21 +31,22 @@ func (j *Jmysql) Command(arg ...string) *exec.Cmd {
 func (j *Jmysql) Import(data string) {
 	exe.RunWithData(j.Command(j.Squema), data)
 }
+
 //"--set-gtid-purged=OFF"//"--no-data"
-func (j *Jmysql) Dump(folder string, squema string,arg ...string) {
+func (j *Jmysql) Dump(folder string, squema string, arg ...string) {
 	if squema != "" {
 		j.Squema = squema
 	}
-	arg = append([]string{ "-u", j.Root, "-p"+j.Pass,  "-h", j.Dns, j.Squema}, arg...)
-	cmd := exec.Command("mysqldump",arg...)
+	arg = append([]string{"-u", j.Root, "-p" + j.Pass, "-h", j.Dns, j.Squema}, arg...)
+	cmd := exec.Command("mysqldump", arg...)
 	jio.CreateFile(folder+"/"+j.Squema+".sql", exe.Run(cmd, false))
 
 }
 func (j *Jmysql) DumpNoData(folder string, squema string) {
-		j.Dump(folder, squema,"--no-data")
+	j.Dump(folder, squema, "--no-data")
 }
 func (j *Jmysql) DumpSetGtidPurgedoff(folder string, squema string) {
-		j.Dump(folder, squema,"--set-gtid-purged=OFF")
+	j.Dump(folder, squema, "--set-gtid-purged=OFF")
 }
 func (j *Jmysql) DumpSameHostMultiSquema(dir string, squemas []string) {
 	for _, squema := range squemas {

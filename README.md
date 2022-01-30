@@ -1,2 +1,2 @@
-# go_tools
-Mi set de herramientas en GO, para reusar en proyectos de Golang
+# jgt
+mi set de herramientas en go, perfecto para rehusar en proyecto de golang

@@ -1,8 +1,8 @@
-module github.com/nico4kd/go_tools/mysql
+module github.com/nico4kd/jgt/mysql
 
-go 1.17
+go 1.15
 
 require (
-	github.com/nico4kd/go_tools/exe v0.0.0-20201123023022-db906cc3c944
-	github.com/nico4kd/go_tools/jio v0.0.0-20201123023022-db906cc3c944
+	github.com/nico4kd/jgt/exe
+	github.com/nico4kd/jgt/jio
 )
