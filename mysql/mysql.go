@@ -4,7 +4,7 @@ import (
 	"os/exec"
 
 	"github.com/nico4kd/go_tools/exe"
-	"github.com/nico4kd/jgo_toolsgt/jio"
+	"github.com/nico4kd/go_tools/jio"
 )
 
 type Jmysql struct {
