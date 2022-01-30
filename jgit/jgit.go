@@ -4,7 +4,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/nico4kd/jgt/exe"
+	"github.com/nico4kd/go_tools/exe"
 )
 
 type Jgit struct {

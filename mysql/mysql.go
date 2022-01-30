@@ -3,8 +3,8 @@ package mysql
 import (
 	"os/exec"
 
-	"github.com/nico4kd/jgt/exe"
-	"github.com/nico4kd/jgt/jio"
+	"github.com/nico4kd/go_tools/exe"
+	"github.com/nico4kd/jgo_toolsgt/jio"
 )
 
 type Jmysql struct {

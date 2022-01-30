@@ -1,8 +1,8 @@
-module github.com/nico4kd/jgt/mysql
+module github.com/nico4kd/go_tools/mysql
 
 go 1.15
 
 require (
-	github.com/nico4kd/jgt/exe
-	github.com/nico4kd/jgt/jio
+	github.com/nico4kd/go_tools/exe
+	github.com/nico4kd/go_tools/jio
 )
